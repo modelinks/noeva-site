@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>プライバシーポリシー - noeva</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .header {
+            text-align: center;
+            padding: 48px 20px 12px;
+        }
+        .header a {
+            text-decoration: none;
+            color: #86868b;
+            font-size: 14px;
+        }
+        .header a:hover { color: #1d1d1f; }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+        .header .date {
+            font-size: 13px;
+            color: #86868b;
+            margin-top: 4px;
+        }
+        .content {
+            max-width: 680px;
+            margin: 24px auto 60px;
+            padding: 32px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        @media (max-width: 720px) {
+            .content { margin-left: 16px; margin-right: 16px; }
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 28px 0 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #e5e5ea;
+        }
+        h2:first-child { margin-top: 0; }
+        p { margin: 8px 0; font-size: 15px; color: #333; }
+        ul {
+            margin: 8px 0 8px 24px;
+            font-size: 15px;
+            color: #333;
+        }
+        li { margin: 4px 0; }
+        a { color: #0071e3; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #86868b;
+            border-top: 1px solid #e5e5ea;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="./">← noeva サポート</a>
+        <h1>プライバシーポリシー</h1>
+        <p class="date">制定：2026年5月8日</p>
+    </div>
+
+    <div class="content">
+        <h2>1. 基本方針</h2>
+        <p>noeva（以下「本アプリ」）は、ユーザーのプライバシーを最優先します。日記等の記録データは原則としてユーザーの端末内のみに保存され、外部のサーバーには保存されません。本ポリシーは、本アプリが取り扱う情報、利用目的、第三者提供について定めるものです。</p>
+
+        <h2>2. 収集・取り扱う情報</h2>
+        <p><strong>ユーザーが入力するデータ（端末内に保存）</strong></p>
+        <ul>
+            <li>日記本文・タイトル・タグ・気分（ムード）の記録</li>
+            <li>AI との対話ログ（入力したテキスト・音声から変換されたテキスト）</li>
+            <li>添付した写真・動画等のメディア</li>
+            <li>キャラクターの呼び名・カスタムアバター画像・カスタム指示文</li>
+            <li>テーマカラー・通知時刻等のアプリ設定</li>
+        </ul>
+        <p><strong>OS から取得する情報（オプション、ユーザーの許可制）</strong></p>
+        <ul>
+            <li>マイク音声（音声入力時のみ。テキスト変換後は破棄）</li>
+            <li>音声認識結果（端末内処理）</li>
+            <li>写真ライブラリ（メディア添付時のみ）</li>
+            <li>Apple ヘルスケアの情報（歩数・消費カロリーのみ。連携を ON にした場合）</li>
+        </ul>
+        <p><strong>自動的に取得する情報</strong></p>
+        <ul>
+            <li>サブスクリプションの状態（Apple StoreKit 経由で管理）</li>
+        </ul>
+
+        <h2>3. 情報の利用目的</h2>
+        <ul>
+            <li>対話・日記自動生成・振り返り等の本アプリ機能の提供</li>
+            <li>ユーザーが選択した気分・ヘルスケア指標等の可視化</li>
+            <li>サブスクリプションの購入確認と機能解放</li>
+            <li>不具合の調査と改善（個人を特定しない範囲で）</li>
+        </ul>
+
+        <h2>4. 第三者への提供・外部送信</h2>
+        <p><strong>Cloudflare Workers（中継サーバー）</strong></p>
+        <p>AI プロバイダに送信するリクエストを中継するために、提供者が運営する Cloudflare Workers のプロキシ API を経由します。プロキシは個人情報を保存せず、最小限のリクエストログ（タイムスタンプ・エンドポイント・ステータスコード等、個人情報を含まないもの）のみを保持します。</p>
+
+        <p><strong>Google（Gemini API）</strong></p>
+        <p>AI による対話応答および日記の自動生成、振り返り生成のため、ユーザーの発話内容・チャット入力・直近の日記要約等が Google の生成 AI サービス（Gemini API）に送信されます。Google の API 規約により、本ポリシー時点でこれらの送信内容は学習に利用されない設定が適用されます。詳細は <a href="https://ai.google.dev/" target="_blank" rel="noopener noreferrer">Google AI 開発者向けポリシー</a>をご確認ください。</p>
+
+        <p><strong>Apple</strong></p>
+        <p>サブスクリプションの購入・管理は Apple の App Store / StoreKit 経由で処理されます。Apple ヘルスケアと連携した場合、許可した範囲のヘルスデータが端末内で読み取られます（外部送信はされません）。</p>
+
+        <p>上記以外の第三者にユーザーの個人情報を提供することはありません。本アプリは広告 SDK や解析 SDK を組み込みません。</p>
+
+        <h2>5. データの保存場所・保存期間</h2>
+        <ul>
+            <li><strong>端末内</strong>：日記・対話ログ・設定など、本アプリのデータはユーザーのデバイス内のみに保存されます。</li>
+            <li><strong>外部サーバー（noeva 側）</strong>：日記本文や対話ログを永続的に保存することはありません。AI プロバイダへのリクエスト中継に必要な瞬間のみ通過します。</li>
+        </ul>
+        <p>データの保存期間は、ユーザーがアプリ内で削除するか、本アプリ自体を削除するまでです。本アプリの削除に伴い端末内のデータも消去されます。</p>
+
+        <h2>6. ユーザーの権利・選択</h2>
+        <ul>
+            <li><strong>個別データの削除</strong>：日記詳細画面から個別の記録を削除できます。</li>
+            <li><strong>全データの削除</strong>：設定画面の「データを削除」または本アプリ自体の削除によって、端末内の全データを消去できます。</li>
+            <li><strong>ヘルスケア連携の解除</strong>：設定画面のトグル、または iPhone の「設定 > プライバシー > ヘルスケア」から行えます。</li>
+            <li><strong>マイク・写真等の権限</strong>：iPhone の「設定 > noeva」から、いつでも変更できます。</li>
+            <li><strong>サブスクリプションの解約</strong>：Apple ID の設定から行えます。</li>
+        </ul>
+
+        <h2>7. 子どもに関する取り扱い</h2>
+        <p>本アプリは 13 歳未満のお子様を対象としたサービスではありません。13 歳未満のお子様から意図的に個人情報を収集することはありません。</p>
+
+        <h2>8. メンタルヘルスに関するご注意</h2>
+        <p>本アプリは医療機器・カウンセリングサービスではありません。AI が生成する応答や日記本文は心理療法・診断・治療に代わるものではありません。深刻な悩みについては医療機関や信頼できる相談窓口にご相談ください。</p>
+
+        <h2>9. セキュリティ</h2>
+        <p>外部送信時には HTTPS 通信を使用し、中継サーバーへのアクセスは固有のシークレットによる認証で保護しています。端末内データは iOS 標準の Data Protection によって暗号化されます。ただし、インターネット上の通信やデータ保存において完全なセキュリティを保証するものではありません。</p>
+
+        <h2>10. プライバシーポリシーの変更</h2>
+        <p>本ポリシーは必要に応じて変更することがあります。重要な変更がある場合は、本アプリ内または本ページにてお知らせします。変更後も本アプリの利用を継続した場合、変更に同意したものとみなします。</p>
+
+        <h2>11. お問い合わせ</h2>
+        <p>プライバシーに関するご質問・ご要望がございましたら、<a href="contact">お問い合わせページ</a>よりご連絡ください。</p>
+    </div>
+
+    <footer>
+        &copy; 2026 noeva
+    </footer>
+</body>
+</html>

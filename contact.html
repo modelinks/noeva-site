@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>お問い合わせ - noeva</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .header {
+            text-align: center;
+            padding: 48px 20px 12px;
+        }
+        .header a {
+            text-decoration: none;
+            color: #86868b;
+            font-size: 14px;
+        }
+        .header a:hover { color: #1d1d1f; }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+        .content {
+            max-width: 680px;
+            margin: 24px auto 60px;
+            padding: 32px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        @media (max-width: 720px) {
+            .content { margin-left: 16px; margin-right: 16px; }
+        }
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 18px;
+            background: #f5f5f7;
+            border-radius: 14px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .contact-card .card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-card .card-icon.instagram {
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+        }
+        .contact-card .card-icon.x {
+            background: #000;
+        }
+        .contact-card .card-icon.mail {
+            background: linear-gradient(135deg, #ff6b8a, #ff8fa3);
+        }
+        .contact-card .card-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+        .contact-card .card-icon .x-logo {
+            color: white;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .contact-card .card-info {
+            flex: 1;
+        }
+        .contact-card .card-info .card-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .contact-card .card-info .card-desc {
+            font-size: 13px;
+            color: #86868b;
+            margin-top: 2px;
+        }
+        .contact-card .card-arrow {
+            font-size: 14px;
+            color: #86868b;
+        }
+        .dm-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b8a, #ff8fa3);
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+        .notes {
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e5ea;
+        }
+        .notes h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .note-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 10px 0;
+            font-size: 14px;
+            color: #333;
+        }
+        .note-item .icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: #f5f5f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #86868b;
+            border-top: 1px solid #e5e5ea;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="./">← noeva サポート</a>
+        <h1>お問い合わせ</h1>
+    </div>
+
+    <div class="content">
+        <p style="text-align:center; font-size:15px; color:#333; margin-bottom:8px;">noeva に関するご質問・ご要望・不具合報告は<br>下記よりお気軽にご連絡ください。</p>
+        <p style="text-align:center; font-size:13px; color:#86868b; margin-bottom:4px;">DM でのお問い合わせにはより早く返信できます</p>
+
+        <div class="contact-methods">
+            <a href="https://www.instagram.com/noeva_app" target="_blank" rel="noopener" class="contact-card">
+                <div class="card-icon instagram">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">Instagram <span class="dm-badge">早い返信</span></div>
+                    <div class="card-desc">@noeva_app</div>
+                </div>
+                <div class="card-arrow">›</div>
+            </a>
+
+            <a href="https://x.com/noeva_app" target="_blank" rel="noopener" class="contact-card">
+                <div class="card-icon x">
+                    <span class="x-logo">𝕏</span>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">X (Twitter) <span class="dm-badge">早い返信</span></div>
+                    <div class="card-desc">@noeva_app</div>
+                </div>
+                <div class="card-arrow">›</div>
+            </a>
+
+            <a href="mailto:contact@reqme.jp" class="contact-card">
+                <div class="card-icon mail">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">メール</div>
+                    <div class="card-desc">contact@reqme.jp</div>
+                </div>
+                <div class="card-arrow">›</div>
+            </a>
+        </div>
+
+        <div class="notes">
+            <h3>お問い合わせ前にご確認ください</h3>
+            <div class="note-item">
+                <div class="icon">📱</div>
+                <div>不具合の場合は、ご利用の <strong>iOS バージョン</strong>と <strong>iPhone モデル</strong>を併せてお知らせいただけるとスムーズです。</div>
+            </div>
+            <div class="note-item">
+                <div class="icon">⏰</div>
+                <div>返信は数日いただくことがあります。お急ぎの場合は Instagram または X の DM をご利用ください。</div>
+            </div>
+            <div class="note-item">
+                <div class="icon">🙇</div>
+                <div>サブスクリプションの返金については、<a href="https://support.apple.com/ja-jp" target="_blank" rel="noopener" style="color:#0071e3;">Apple サポート</a>へお問い合わせください。アプリ提供者側で返金処理を行うことはできません。</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 noeva
+    </footer>
+</body>
+</html>
